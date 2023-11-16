@@ -24,6 +24,7 @@
         />
 
         <link rel="stylesheet" href="./style.css" />
+        <script defer src="./main.js"></script>
     </head>
     <body>
         <main class="advice">
@@ -35,7 +36,7 @@
             >
             <img class="advice__divider" src="./images//pattern-divider-mobile.svg" alt="">
             <img class="advice__divider--desktop" src="images/pattern-divider-desktop.svg" alt="">
-            <button class="advice__btn">
+            <button class="advice__btn" onclick="generateAdvice()" title="Generate new advice">
                 <img src="./images/icon-dice.svg" width="24px" height="24px" alt="submit request button">
             </button>
           </main>
