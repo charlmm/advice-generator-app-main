@@ -1,0 +1,113 @@
+
+body {
+    line-height: 1.5;
+}
+
+button {
+    background-color: transparent;
+}
+
+/* Global */
+:root {
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+html {
+    font-size: clamp(0.6rem, 0.425rem + 1vw, 1rem);
+    font-family: 'Manrope', sans-serif;
+    color-scheme: dark;
+}
+
+body {
+    display: grid;
+    align-content: space-between;
+    justify-items: center;
+    block-size: 100vh;
+    font-size: 1.6rem;
+    color: var(--LightCyan);
+    background-color: var(--DarkBlue);
+}
+
+/* Advice */
+.advice {
+    position: relative;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px;
+    padding-block: 32px 60px;
+    inline-size: 90%;
+    max-inline-size: 36rem;
+    background-color: var(--DarkGrayishBlue);
+}
+
+.advice-number {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--NeonGreen);
+}
+
+.advice__text {
+    margin-block-start: 24px;
+    inline-size: 88%;
+    font-size: 28px;
+    text-align: center;
+}
+
+.advice__text::before,
+.advice__text::after {
+    font-size: 28px;
+}
+
+.advice__divider,
+.advice__divider--desktop {
+    display: none;
+    margin-block-start: 24px;
+}
+
+@media (min-width: 375px) and (max-width: 1439px) {
+    .advice__divider {
+        display: block;
+    }
+}
+
+@media (min-width: 1440px) {
+    .advice__divider--desktop {
+        display: block;
+    }
+}
+
+.advice__btn {
+    position: absolute;
+    inset-block-end: -28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 16px;
+    background-color: var(--NeonGreen);
+    cursor: pointer;
+}
+
+.advice__btn:hover {
+    box-shadow: 0 0 30px 0 var(--NeonGreen);
+}
+
+/* Footer */
+.footer {
+    grid-row: 3;
+    padding-block: 2rem;
+    padding-inline: 5%;
+    text-align: center;
+}
+
+.footer__link {
+    color: var(--NeonGreen);
+}
